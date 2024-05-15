@@ -10,7 +10,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /frontend(/|$)(.*)
+      - path: /new-frontend(/|$)(.*)
         pathType: ImplementationSpecific
         backend:
           service:
