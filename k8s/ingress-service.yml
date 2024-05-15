@@ -10,10 +10,8 @@ spec:
   rules:
   - http:
       paths:
-      - path: /frontend
-      # - path: /?(.*)
-        # pathType: ImplementationSpecific
-        pathType: Prefix
+      - path: /frontend(/|$)(.*)
+        pathType: ImplementationSpecific
         backend:
           service:
             name: my-frontend-clusterip-service
