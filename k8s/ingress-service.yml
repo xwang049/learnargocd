@@ -9,10 +9,10 @@ spec:
   rules:
   - http:
       paths:
-      - path: /new-frontend(/|$)(.*)
+      - path: {{ .Values.paths.client }}
         pathType: ImplementationSpecific
         backend:
           service:
             name: my-frontend-clusterip-service
             port:
-              number: 80
+              number: {{ .Values.ports.client }}

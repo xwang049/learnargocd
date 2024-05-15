@@ -19,7 +19,7 @@ spec:
         - name: my-frontend
           image: wxn2001/my-frontend:latest
           ports:
-            - containerPort: 80
+            - containerPort: {{ .Values.ports.client }}
           resources:
             requests:
               memory: "256Mi"
@@ -36,7 +36,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - port: 80
-      targetPort: 80
+    - port: {{ .Values.ports.client }}
+      targetPort: {{ .Values.ports.client }}
   selector:
     app: my-frontend
