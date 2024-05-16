@@ -1,7 +1,7 @@
 replicaCount: 3
 
 paths:
-  client: /new-frontend(/|$)(.*)
+  client: /
 
 ports:
   client: 80
