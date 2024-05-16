@@ -52,7 +52,7 @@ ingress:
   hosts:
     - host: demo.wxn2001.local
       paths:
-        - path: /new-frontend(/|$)(.*)
+        - path: /
           pathType: ImplementationSpecific
   tls: []
   #  - secretName: chart-example-tls
