@@ -1,11 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
+  labels:
+    argocd.argoproj.io/instance: argo-multi-container-app-k8s
   name: my-frontend-clusterip-service
+  namespace: argo-test
 spec:
-  type: ClusterIP
   ports:
-    - port: {{ .Values.ports.client }}
-      targetPort: {{ .Values.ports.client }}
+    - port: 80
+      targetPort: 80
   selector:
     app: my-frontend
+  type: ClusterIP

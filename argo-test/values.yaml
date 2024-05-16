@@ -5,3 +5,16 @@ paths:
 
 ports:
   client: 80
+
+image:
+  repository: wxn2001/my-frontend
+  tag: latest
+deployment:
+  version: blue
+resources:
+  requests:
+    memory: "256Mi"
+    cpu: "250m"
+  limits:
+    memory: "512Mi"
+    cpu: "500m"
